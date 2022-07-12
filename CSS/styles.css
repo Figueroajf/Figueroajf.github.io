@@ -1,0 +1,668 @@
+/*
+1.El tamaño de la pantalla de PC es de 1366px
+
+2.Para moblile se utilizó el de la consigna de 375px 
+
+3.Se recomienda visualizar en Firefox developer Edition !importan; 
+ya que en Chrome hay que cambiar la dimensión varias veces para que se adapte
+(no se si es un problema de mi chrome solamente)
+También se soluciona separando y volviendo a cololar el inspector (DevTools)
+de la ventana del navegador */
+
+/*body*/
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    
+}
+/*header*/
+
+/*barra de navegación*/
+nav {
+    display:flex;
+    width: 80%;                    /* ------>este es el ancho principal*/
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 120px 100px; /* -------> con este padding para centrar contenido*/
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 50%;
+}
+
+header button {
+    border: none;
+    border-radius: 50px;
+    height: 35px;
+    width: 120px;
+    background-color: #F3603B;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+/*pseudo clases barra de navegación header y footer*/
+
+.clic1 li:hover {
+    color: #B3B2B7;
+    cursor: pointer;
+}
+
+.clic2 li:hover {
+    color:rgba(245, 109, 76, 0.9);
+    cursor: pointer;
+}
+
+header button:hover {
+    cursor: pointer;
+    background-color: rgb(243, 96, 59, .5);
+    color: rgb(255, 255, 255, .5);
+}
+
+/*segunda sección del header contiene (H1, p, button) e imagen de graficos estadísticos*/
+
+header section {
+    display: flex;
+    width: 85%;
+    margin: 50px 120px 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: #232C50;   
+}
+
+header p {
+    width: 350px;
+    color: #B3B2B7;
+    margin-bottom: 50px;
+}
+
+/*main*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px 120px 50px;
+}
+
+main section {
+    width: 50%;
+    justify-content: space-around;
+}
+
+h2 {
+    color: #232C50; 
+}
+
+main p {
+    color: #B3B2B7;
+    width: 350px;
+}
+
+main ul {
+    list-style-type: none;
+}
+
+main ol {
+    list-style-type: none;
+    
+}
+
+main ul li {
+    font-size: 12px;
+}
+
+/*tercera sección con articulos */
+
+.articulos {
+    display: flex;
+    width: 100%;
+    margin: 10px 10px 80px;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    
+}
+
+/*este h3 va arriba de los articulos pero está afectado por la clase .articulos*/
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    color: #242E53;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+article {
+    width: 30%;
+    text-align: center;
+    background-color: #FAFAFA;
+    position: relative;
+    padding: 30px 10px 10px;
+}
+
+article img {
+    width: 70px;
+    position: absolute;
+    bottom: 140px;
+    right: 125px;
+
+}
+
+article p {
+    width: 100%;
+    font-size: 12px;
+    text-align: center; 
+ 
+}
+
+main button {
+    border: none;
+    border-radius: 50px;
+    height: 35px;
+    width: 120px;
+    background-color: #F3603B;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    
+}
+
+/*pseudo clase main button*/
+
+main button:hover {
+    cursor: pointer;
+    background-color: rgb(243, 96, 59, .5);
+    color: rgb(255, 255, 255, .5);
+}
+
+main div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carrusel {
+    display: none;
+}
+
+/*footer*/
+
+/*sección naranja*/
+
+footer {
+    width: 100%;
+    height: 300px;
+    
+}
+
+.naranja { 
+    background-color:  #F3613C;
+    padding: 40px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    margin-top: 200px;
+}
+
+.naranja p {
+    font-size: 40px;
+    width: 500px;
+    font-weight: 700;
+}
+
+.naranja button {
+    border: none;
+    border-radius: 50px;
+    height: 35px;
+    width: 120px;
+    background-color: #FFFFFF;
+    color: #F3603B;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    margin-right: 60px;
+}
+
+/*pseudoclase button seccion naranja*/
+.naranja button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255, .9);
+    color: rgb(243, 96, 59, .5);
+}
+
+.oscuro {
+    display: flex;
+    
+    padding: 40px 120px;
+    background-color: #1E1E26;
+    justify-content: space-around;
+
+}
+
+.logo-bajo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.oscuro nav{
+    padding: 0;
+    margin: 0;
+    width: 30%;
+}
+
+.oscuro ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/*subirnav lo utiicé para alinear la 
+columna derecha (compuesta por Career, community 
+y Pivacy Policy) con la de la izquierda en el margen superior*/
+#subirnav {
+    height: 100%;
+}
+
+.oscuro li {
+    color: #FFFFFF;
+    font-size: 11px;
+    margin: 10px;
+    width: 100px;
+}
+
+#redes {
+    display: flex;
+    justify-content: space-around;
+}
+
+#redes img {
+    width: 15px;
+}
+
+form input {
+    height: 35px;
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    padding-left: 10px;
+}
+
+.errorenvio {
+    color: rgb(242,95,58);
+    display: none;
+    font-size: 10px;
+}
+
+form button {
+    color: #FFFFFF;
+    background-color: #F3603B;
+    border: none;
+    border-radius: 50px;
+    height: 35px;
+    width: 50px;
+    margin-left: 5px;
+}
+
+/*pseudoclase button del formulario sección oscura*/
+
+form button:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255, .5);
+    background-color: rgba(248, 176, 158, 0.9);
+}
+
+
+#email:invalid + .errorenvio {
+        display: block;
+        margin: 5px 15px;
+}
+
+form {
+    display: flex;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.formulario p {
+    color: #8C8C94;
+    font-size: 11px;
+    text-align: right;
+    margin-top: 40px;
+}
+
+/*pseudoclases redes footer*/
+
+#redes img:hover {
+    cursor: pointer;
+    background-color: #F3603B;
+}
+
+/*------pseudo elementos------*/
+
+h4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #323851;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.boton1::before {
+    content: url("../imagenes/Button\ 1.png");
+    position: absolute;
+    right: 500px;
+}
+
+.boton2::before {
+    content: url("../imagenes/Button\ 2.png");
+    position: absolute;
+    right: 500px;
+}
+
+.boton3::before {
+    content: url("../imagenes/Button\ 3.png");
+    position: absolute;
+    right: 500px;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-around;
+    color:#FAFAFA;
+    width: 30px;
+    font-size: 20px;
+}
+
+i:hover {
+
+    color:#F3603B;
+    cursor: pointer;
+}
+
+/*las fotos de Anisha Ali y Richard se agrandan al pasar el mouse por arriba*/
+.articulos img:hover {
+    transform: scale(1.2);
+}
+
+/*-------------mobile media-------------------*/
+
+/*ham es el manú hamburguesa*/
+.ham {
+    display: none;
+    width: 30px;
+}
+
+@media (max-width: 375px) {
+
+
+    body {
+        width: 375px;
+        margin: 0px;
+        padding: 0px;
+    }
+    header { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    header nav {
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        
+    }
+
+    header nav img {
+        margin-left: 20px;
+    }
+
+    header section {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin:0;
+    }
+
+    header p {
+        margin-left: 10px;
+    }
+
+    nav ul {
+        display: none;
+    }
+    nav button {
+        display: none;
+    }
+    .ham {
+        display: block;
+        margin-right: 20px;
+    }
+    main {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+    }
+
+    main section {
+        width: 100%;
+    }
+
+    .estadistica img{
+        width: 375px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 36px;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+
+     p {
+        text-align: center;
+
+    }
+
+    .parrafo1 {
+        margin-left: 10px;
+        margin-bottom: 50px;
+    }
+
+    .boton {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .boton1::before {
+        content: url("../imagenes/Button\ 1.png");
+        position: absolute;
+        right: 330px;
+        top: 1px;
+        margin-right: 8px;
+    }
+    
+    .boton2::before {
+        content: url("../imagenes/Button\ 2.png");
+        position: absolute;
+        right: 330px;
+        top: 1px;
+        margin-right: 8px;
+    }
+    
+    .boton3::before {
+        content: url("../imagenes/Button\ 3.png");
+        position: absolute;
+        right: 330px;
+        top: 1px;
+        margin-right: 8px;
+    }
+
+
+    ol {
+        width: 100%; 
+        margin: 0;  
+        padding-left: 0px;
+
+    }
+
+    h4 {
+        background-color: hwb(11 64% 3% / 0.452);
+        height: 45px;
+        padding-left: 50px;
+        
+    }
+
+    .lista ul {
+        position: relative;
+        height: 160px;
+        width: 375px;
+       
+    }
+    
+    .lista p {
+        text-align: left;
+        position: absolute;
+        bottom: 1px;
+        top: 50px;
+        right: 40px;
+        line-height: 25px;
+        font-size: 14px;
+        font-weight: 500;
+        
+    }
+
+    h3 {
+        text-align: center;
+    }
+    
+    .articulos {
+        width: 100%;
+    }
+
+    .articulo1 {
+        display: none;
+    }
+    .articulo3 {
+        display: none;
+    }     
+    
+   .articulos {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 80px 0;
+        
+   }
+
+   .articulos article {
+        width: 100%;
+        
+   }
+
+   .articulos img {
+        left: 150px;
+        bottom: 130px;
+   }
+
+   .carrusel {
+    display: block;
+    margin-top: 30px;
+   }
+    
+   .naranja {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 10px;
+        margin-top: 50px;
+   }
+
+   .naranja button{
+    margin-right: 0;
+   }
+   .naranja p {
+        width: 100%;
+   }
+
+   .oscuro {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+   }
+
+   form {
+        display: flex;
+   }
+
+    form button {
+        width: 80px;
+   }
+
+   .oscuro nav {
+    width: 375px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-bottom: 40px;
+   }
+
+   .oscuro p {
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    left: 90px;
+   }
+
+   #redes {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+   }
+
+/* este es el ancho para las imágnes de las redes, que fueron reemplazadas
+por los iconos.
+
+   #redes img {
+        width: 30px;
+   }
+*/
+   .icon {
+        font-size: 30px;
+   }
+
+   .logo-bajo {
+        display: flex;
+        flex-direction: column-reverse;
+   }
+
+   .logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+   }
+
+}
